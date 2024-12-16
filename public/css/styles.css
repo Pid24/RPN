@@ -1,0 +1,229 @@
+/* Global Styles */
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Navbar Styles */
+nav {
+    background: #007bff;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffeb3b;
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(
+            to bottom,
+            rgba(0, 123, 255, 0.8),
+            rgba(0, 123, 255, 0.5)
+        ),
+        url("../img/background-anak.jpg") no-repeat center center/cover;
+    color: white;
+    height: 100vh;
+    padding: 2rem 5%;
+}
+
+.hero-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-left {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-left .logo {
+    width: 200px;
+    margin: 0 auto;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.hero-right {
+    flex: 1;
+    text-align: left;
+    padding: 0 2rem;
+}
+
+.hero-right h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-right p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-right .btn {
+    display: inline-block;
+    background: #28a745;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.hero-right .btn:hover {
+    background: #218838;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    #hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .hero-left,
+    .hero-right {
+        flex: none;
+        padding: 1rem 0;
+    }
+
+    .hero-right h1 {
+        font-size: 2rem;
+    }
+
+    .hero-right p {
+        font-size: 1rem;
+    }
+
+    .hero-right .btn {
+        font-size: 1rem;
+    }
+}
+
+.register-form {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.register-form label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+    text-align: left;
+}
+
+.register-form input,
+.register-form select,
+.register-form button {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.register-form button {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.register-form button:hover {
+    background: #218838;
+}
+
+/* Informasi Section */
+#informasi {
+    background: #f9f9f9;
+    padding: 2rem;
+    text-align: center;
+}
+
+#informasi h2 {
+    color: #007bff;
+    margin-bottom: 1.5rem;
+}
+
+#informasi .galeri {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#informasi .galeri img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+#informasi .galeri img:hover {
+    transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #hero {
+        padding: 1rem;
+        height: auto;
+    }
+
+    .register-form {
+        padding: 1rem;
+    }
+
+    #informasi .galeri img {
+        width: 100%;
+        max-width: 150px;
+    }
+}
